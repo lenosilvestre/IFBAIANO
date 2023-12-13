@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Acadêmicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            padding-left: 25%;
+            padding-right: 25%;
+            text-align: left;
+            margin-top: 0;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        #progressbar {
+            width: 100%;
+            height: 40px;
+            background-color: #eeeeeebd;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            /* Certifique-se de que a barra de progresso está sobreposta a outros elementos */
+        }
+
+        #progress {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progressbar">
+        <div id="progress"></div>
+    </div>
+
+    <h1>Análise e Desenvolvimento de Sistemas</h1>
+    <ul>
+        <li><input type="checkbox" id="adsCheckbox1" onclick="updateProgressBar('adsCheckbox1')"> Análise, projeto e
+            desenvolvimento de sistemas de informação.</li>
+        <li><input type="checkbox" id="adsCheckbox2" onclick="updateProgressBar('adsCheckbox2')"> Utilização de
+            conceitos, metodologias, arquiteturas, técnicas, fases e ferramentas.</li>
+        <li><input type="checkbox" id="adsCheckbox3" onclick="updateProgressBar('adsCheckbox3')"> Análise e Projeto
+            Orientados a Objeto (Processo Unificado e UML).</li>
+        <li><input type="checkbox" id="adsCheckbox4" onclick="updateProgressBar('adsCheckbox4')"> Metodologia ou
+            Framework Ágil (Scrum e XP).</li>
+    </ul>
+
+    <h2>Qualidade de Software</h2>
+    <ul>
+        <li><input type="checkbox" id="qsCheckbox1" onclick="updateProgressBar('qsCheckbox1')"> Teste de Software.</li>
+        <li><input type="checkbox" id="qsCheckbox2" onclick="updateProgressBar('qsCheckbox2')"> Métricas de Software
+            (contagem de pontos de função indicativa, estimada e detalhada).</li>
+    </ul>
+
+    <h2>Engenharia de Requisitos</h2>
+    <ul>
+        <li><input type="checkbox" id="erCheckbox1" onclick="updateProgressBar('erCheckbox1')"> Engenharia de
+            Requisitos.</li>
+    </ul>
+
+    <h2>Modelagem de Processos</h2>
+    <ul>
+        <li><input type="checkbox" id="mpCheckbox1" onclick="updateProgressBar('mpCheckbox1')"> Uso dos softwares Bizagi
+            BPMN Modeler 3.0 e Astah-community-7.1.0.</li>
+    </ul>
+
+    <h2>Técnicas e Linguagens de Programação</h2>
+    <ul>
+        <li><input type="checkbox" id="tlpCheckbox1" onclick="updateProgressBar('tlpCheckbox1')"> Programação orientada
+            a objetos.</li>
+        <li><input type="checkbox" id="tlpCheckbox2" onclick="updateProgressBar('tlpCheckbox2')"> Acesso a banco de
+            dados.</li>
+        <li><input type="checkbox" id="tlpCheckbox3" onclick="updateProgressBar('tlpCheckbox3')"> Linguagens de
+            programação PHP e Java.</li>
+        <li><input type="checkbox" id="tlpCheckbox4" onclick="updateProgressBar('tlpCheckbox4')"> Uso dos softwares IDE
+            Eclipse Java Oxygen e IDE Netbeans.</li>
+    </ul>
+
+    <h2>Gerenciadores de Banco de Dados (SGBD)</h2>
+    <ul>
+        <li><input type="checkbox" id="sgbdCheckbox1" onclick="updateProgressBar('sgbdCheckbox1')"> Arquitetura de um
+            SGBD.</li>
+        <li><input type="checkbox" id="sgbdCheckbox2" onclick="updateProgressBar('sgbdCheckbox2')"> Banco de dados:
+            fundamentos, características, componentes e funcionalidades.</li>
+        <li><input type="checkbox" id="sgbdCheckbox3" onclick="updateProgressBar('sgbdCheckbox3')"> Modelos de Bancos de
+            Dados.</li>
+        <li><input type="checkbox" id="sgbdCheckbox4" onclick="updateProgressBar('sgbdCheckbox4')"> Projeto de Banco de
+            Dados: conceitual, lógico e físico.</li>
+        <li><input type="checkbox" id="sgbdCheckbox5" onclick="updateProgressBar('sgbdCheckbox5')"> Modelo relacional e
+            modelo entidade relacionamento.</li>
+        <li><input type="checkbox" id="sgbdCheckbox6" onclick="updateProgressBar('sgbdCheckbox6')"> Álgebra Relacional.
+        </li>
+        <li><input type="checkbox" id="sgbdCheckbox7" onclick="updateProgressBar('sgbdCheckbox7')"> Linguagem de
+            consulta estruturada (SQL).</li>
+        <li><input type="checkbox" id="sgbdCheckbox8" onclick="updateProgressBar('sgbdCheckbox8')"> Uso dos softwares
+            Oracle Database Express Edition 11g Release 2, MySQL Community 5, brModelo 2.0, DBDesigner 4, e MySQL
+            Workbench 6.</li>
+    </ul>
+
+    <h2>Data Warehouse e Data Marts</h2>
+    <ul>
+        <li><input type="checkbox" id="dwCheckbox1" onclick="updateProgressBar('dwCheckbox1')"> Modelagens
+            Multidimensionais.</li>
+        <li><input type="checkbox" id="dwCheckbox2" onclick="updateProgressBar('dwCheckbox2')"> Utilização dos softwares
+            Oracle Database Express Edition 11g Release 2, MySQL Community 5, brModelo 2.0, DBDesigner 4, e MySQL
+            Workbench 6.</li>
+    </ul>
+
+    <h2>Algoritmos e Estrutura de Dados</h2>
+    <ul>
+        <li><input type="checkbox" id="aedCheckbox1" onclick="updateProgressBar('aedCheckbox1')"> Fundamentos de lógica
+            de programação.</li>
+        <li><input type="checkbox" id="aedCheckbox2" onclick="updateProgressBar('aedCheckbox2')"> Tipos de dados,
+            expressões, estruturas de controle e repetição, pseudocódigos, fluxogramas.</li>
+        <li><input type="checkbox" id="aedCheckbox3" onclick="updateProgressBar('aedCheckbox3')"> Estruturas de dados
+            homogêneas e heterogêneas.</li>
+        <li><input type="checkbox" id="aedCheckbox4" onclick="updateProgressBar('aedCheckbox4')"> Representação e
+            manipulação de matrizes, listas, filas, pilhas e árvores.</li>
+        <li><input type="checkbox" id="aedCheckbox5" onclick="updateProgressBar('aedCheckbox5')"> Uso do software
+            VisuAlg 3.0.</li>
+    </ul>
+
+    <h2>Conceitos de Segurança da Informação</h2>
+    <ul>
+        <li><input type="checkbox" id="csiCheckbox1" onclick="updateProgressBar('csiCheckbox1')"> Conceitos Básicos:
+            confidencialidade, integridade e disponibilidade.</li>
+        <li><input type="checkbox" id="csiCheckbox2" onclick="updateProgressBar('csiCheckbox2')"> Criptografia.</li>
+        <li><input type="checkbox" id="csiCheckbox3" onclick="updateProgressBar('csiCheckbox3')"> Certificação Digital.
+        </li>
+        <li><input type="checkbox" id="csiCheckbox4" onclick="updateProgressBar('csiCheckbox4')"> Assinatura Digital.
+        </li>
+        <li><input type="checkbox" id="csiCheckbox5" onclick="updateProgressBar('csiCheckbox5')"> Segurança, Golpes e
+            Ataques na Internet.</li>
+        <li><input type="checkbox" id="csiCheckbox6" onclick="updateProgressBar('csiCheckbox6')"> Códigos Maliciosos
+            (Malwares).</li>
+        <li><input type="checkbox" id="csiCheckbox7" onclick="updateProgressBar('csiCheckbox7')"> Segurança de
+            computadores.</li>
+        <li><input type="checkbox" id="csiCheckbox8" onclick="updateProgressBar('csiCheckbox8')"> Normas 27001 e 27002.
+        </li>
+    </ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Recuperar os estados marcados dos checkboxes armazenados no localStorage
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function (checkbox) {
+                var checkboxId = checkbox.id;
+                var isChecked = localStorage.getItem(checkboxId) === "true";
+                checkbox.checked = isChecked;
+            });
+
+            // Atualizar a barra de progresso inicialmente
+            updateProgressBar();
+        });
+
+        function updateProgressBar(checkboxId) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            var progress = (checkedCheckboxes.length / checkboxes.length) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+
+            // Armazenar o estado marcado no localStorage
+            if (checkboxId) {
+                var checkbox = document.getElementById(checkboxId);
+                localStorage.setItem(checkboxId, checkbox.checked);
+            }
+        }
+    </script>
+</body>
+
+</html>
