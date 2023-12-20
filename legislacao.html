@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legislação e Educação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            padding-left: 25%;
+            padding-right: 25%;
+            text-align: left;
+            margin-top: 0;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        #progressbar {
+            width: 100%;
+            height: 40px;
+            background-color: #eeeeeebd;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            /* Certifique-se de que a barra de progresso está sobreposta a outros elementos */
+        }
+
+        #progress {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progressbar">
+        <div id="progress"></div>
+    </div>
+
+    <div id="container">
+        <h1>Regime Jurídico Único (Lei no 8.112/1990)</h1>
+        <ul>
+            <li><input type="checkbox" id="rjuCheckbox1" onclick="updateProgressBar('rjuCheckbox1')"> Das Disposições
+                Preliminares;</li>
+            <li><input type="checkbox" id="rjuCheckbox2" onclick="updateProgressBar('rjuCheckbox2')"> Do Provimento,
+                Vacância, Remoção, Redistribuição e Substituição;</li>
+            <li><input type="checkbox" id="rjuCheckbox3" onclick="updateProgressBar('rjuCheckbox3')"> Dos Direitos e
+                Vantagens;</li>
+            <li><input type="checkbox" id="rjuCheckbox4" onclick="updateProgressBar('rjuCheckbox4')"> Do Regime
+                Disciplinar;</li>
+            <li><input type="checkbox" id="rjuCheckbox5" onclick="updateProgressBar('rjuCheckbox5')"> Do Processo
+                Administrativo Disciplinar;</li>
+            <li><input type="checkbox" id="rjuCheckbox6" onclick="updateProgressBar('rjuCheckbox6')"> Da Seguridade
+                Social do Servidor.</li>
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="liaCheckbox1" onclick="updateProgressBar('liaCheckbox1')">
+                <h2>Lei da Improbidade Administrativa (Lei no 8.429/1992) e alterações.</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="ceCheckbox1" onclick="updateProgressBar('ceCheckbox1')">
+                <h2>Código de Ética dos Servidores Públicos (Decreto no 1.171/1994).</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="paCheckbox1" onclick="updateProgressBar('paCheckbox1')">
+                <h2>Processo Administrativo (Lei no 9.784/1999).</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="pcCheckbox1" onclick="updateProgressBar('pcCheckbox1')">
+                <h2>Lei no 11.091/2005- Dispõe sobre a estruturação do Plano de Carreira dos Cargos
+                    Técnico-Administrativos em
+                    Educação.</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="pndpCheckbox1" onclick="updateProgressBar('pndpCheckbox1')">
+                <h2>Decreto 9.991/2019- Dispõe sobre a Política Nacional de Desenvolvimento de Pessoas da administração
+                    pública
+                    federal direta, autárquica e fundacional.</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+        <h2>Noções de Direito Constitucional</h2>
+        <ul>
+            <li><input type="checkbox" id="dcCheckbox1" onclick="updateProgressBar('dcCheckbox1')"> Dos Princípios
+                Fundamentais;</li>
+            <li><input type="checkbox" id="dcCheckbox2" onclick="updateProgressBar('dcCheckbox2')"> Dos Direitos e
+                Garantias Fundamentais;</li>
+            <li><input type="checkbox" id="dcCheckbox3" onclick="updateProgressBar('dcCheckbox3')"> Dos Direitos
+                Sociais;</li>
+            <li><input type="checkbox" id="dcCheckbox4" onclick="updateProgressBar('dcCheckbox4')"> Da Administração
+                Pública;</li>
+            <li><input type="checkbox" id="dcCheckbox5" onclick="updateProgressBar('dcCheckbox5')"> Da ordem Social.
+            </li>
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="aiCheckbox1" onclick="updateProgressBar('aiCheckbox1')">
+                <h2>Lei nº 12.527/2011 (Acesso à informação).</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="ecaCheckbox1" onclick="updateProgressBar('ecaCheckbox1')">
+                <h2>Estatuto da Criança e do Adolescente - ECA (Lei nº 8.069/90).</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="dudhCheckbox1" onclick="updateProgressBar('dudhCheckbox1')">
+                <h2>Declaração Universal dos Direitos Humanos Adotada e proclamada pela Assembleia Geral das Nações
+                    Unidas
+                    (resolução 217 A III) em 10 de dezembro 1948.</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+        <h2>O atual sistema educacional brasileiro</h2>
+        <ul>
+            <li><input type="checkbox" id="sebCheckbox1" onclick="updateProgressBar('sebCheckbox1')"> Lei de Diretrizes
+                e Bases da Educação Nacional e suas alterações - LDB nº 9.394/96: princípios, fins e organização da
+                Educação Nacional.</li>
+            <li><input type="checkbox" id="sebCheckbox2" onclick="updateProgressBar('sebCheckbox2')"> Níveis e
+                modalidades de educação e ensino.</li>
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="dcnCheckbox1" onclick="updateProgressBar('dcnCheckbox1')">
+                <h2>Diretrizes Curriculares Nacionais Gerais da Educação Básica, 2013.</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="bnccCheckbox1" onclick="updateProgressBar('bnccCheckbox1')">
+                <h2>Base Nacional Comum Curricular.</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="pneCheckbox1" onclick="updateProgressBar('pneCheckbox1')">
+                <h2>Lei nº 13.005, de 25 de junho de 2014 (Plano Nacional de Educação).</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+        <ul>
+            <li><input type="checkbox" id="pniebCheckbox1" onclick="updateProgressBar('pniebCheckbox1')">
+                <h2>Programa Nacional de Integração da Educação Básica na Modalidade de Educação de Jovens e Adultos
+                    (Decreto nº
+                    5.840, 13/07/2006).</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="eiCheckbox1" onclick="updateProgressBar('eiCheckbox1')">
+                <h2>Educação inclusiva. Acessibilidade para pessoas com deficiência (Lei nº 10.048/00, Lei nº 10.098/00
+                    e o
+                    Decreto-Lei nº 5.296/04). Política Nacional para integração da Pessoa com Deficiência (Decreto nº
+                    3.298/99 e
+                    a Lei nº 7.853/89).</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="epCheckbox1" onclick="updateProgressBar('epCheckbox1')">
+                <h2>Regulamentação da Educação Profissional no Brasil: Decreto nº 5.154/04.</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+        <ul>
+            <li><input type="checkbox" id="ltpeCheckbox1" onclick="updateProgressBar('ltpeCheckbox1')">
+                <a href="http://portal.mec.gov.br/setec/arquivos/pdf/LegisBasica.pdf" target="_blank">
+                    <h2>A regulação do trabalho dos profissionais da educação, a partir da legislação educacional.
+                    </h2>
+                </a>
+
+            </li>
+
+            <!-- Adicione mais checkboxes conforme necessário -->
+
+        </ul>
+
+
+        <ul>
+            <li><input type="checkbox" id="paelCheckbox1" onclick="updateProgressBar('paelCheckbox1')">
+                <h2>Processos de apropriação e execução da legislação educacional vigente.</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Recuperar os estados marcados dos checkboxes armazenados no localStorage
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function (checkbox) {
+                var checkboxId = checkbox.id;
+                var isChecked = localStorage.getItem(checkboxId) === "true";
+                checkbox.checked = isChecked;
+            });
+
+            // Atualizar a barra de progresso inicialmente
+            updateProgressBar();
+        });
+
+        function updateProgressBar(checkboxId) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            var progress = (checkedCheckboxes.length / checkboxes.length) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+
+            // Armazenar o estado marcado no localStorage
+            if (checkboxId) {
+                var checkbox = document.getElementById(checkboxId);
+                localStorage.setItem(checkboxId, checkbox.checked);
+            }
+        }
+    </script>
+</body>
+
+</html>
