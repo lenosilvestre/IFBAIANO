@@ -58,12 +58,19 @@
             background-color: #4CAF50;
             width: 0;
         }
+         #progress-text {
+            color: white;
+            font-weight: bold;
+            padding-top: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <div id="progressbar">
-        <div id="progress"></div>
+ <div id="progressbar">
+        <div id="progress">
+            <div id="progress-text">0%</div>
+        </div>
     </div>
 
     <div id="container">
@@ -266,10 +273,11 @@
         });
 
         function updateProgressBar(checkboxId) {
-            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
             var checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
             var progress = (checkedCheckboxes.length / checkboxes.length) * 100;
             document.getElementById('progress').style.width = progress + '%';
+            document.getElementById('progress-text').textContent = progress.toFixed(2) + '%';
 
             // Armazenar o estado marcado no localStorage
             if (checkboxId) {
