@@ -58,7 +58,8 @@
             background-color: #4CAF50;
             width: 0;
         }
-         #progress-text {
+
+        #progress-text {
             color: white;
             font-weight: bold;
             padding-top: 10px;
@@ -67,7 +68,7 @@
 </head>
 
 <body>
- <div id="progressbar">
+    <div id="progressbar">
         <div id="progress">
             <div id="progress-text">0%</div>
         </div>
@@ -117,9 +118,8 @@
 
         <ul>
             <li><input type="checkbox" id="pcCheckbox1" onclick="updateProgressBar('pcCheckbox1')">
-                <h2>Lei no 11.091/2005- Dispõe sobre a estruturação do Plano de Carreira dos Cargos
-                    Técnico-Administrativos em
-                    Educação.</h2>
+                <h2>Lei 12.772/ 2012 e suas alterações-Dispõe sobre a estruturação do Plano de Carreiras e Cargos de
+                    Magistério Federal</h2>
             </li>
             <!-- Adicione mais checkboxes conforme necessário -->
         </ul>
@@ -201,6 +201,15 @@
 
 
         <ul>
+            <li><input type="checkbox" id="dcngCheckbox1" onclick="updateProgressBar('dcngCheckbox1')">
+                <h2>Resolução CNE/CP Nº 1 de 5 de janeiro de 2021 (Diretrizes Curriculares Nacionais Gerais para a
+                    Educação Profissional e Tecnológica)</h2>
+            </li>
+            <!-- Adicione mais checkboxes conforme necessário -->
+        </ul>
+
+
+        <ul>
             <li><input type="checkbox" id="pneCheckbox1" onclick="updateProgressBar('pneCheckbox1')">
                 <h2>Lei nº 13.005, de 25 de junho de 2014 (Plano Nacional de Educação).</h2>
             </li>
@@ -273,7 +282,7 @@
         });
 
         function updateProgressBar(checkboxId) {
-                    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
             var checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
             var progress = (checkedCheckboxes.length / checkboxes.length) * 100;
             document.getElementById('progress').style.width = progress + '%';
